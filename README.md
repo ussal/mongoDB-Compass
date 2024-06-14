@@ -80,3 +80,11 @@ net:
 ```
 Geriye yapmanız gerek 27017 portunu güvenlik durundan dışarıya açmak kalacaktır.
 
+# MongoDB Collection'da Tüm Dokümanlara Yeni Property Ekleme
+Veritabanımızı seçelim.
+
+` use admin `
+
+UpdateMany komutu ile isActive:true özelliğini myCollection koleksiyonumdaki dokümanlara ekleyelim.
+
+` db.myCollection.updateMany( { }, { $set: { isActive: true } } ) `
